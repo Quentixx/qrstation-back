@@ -1,7 +1,5 @@
 package qrstation.back.data;
 
-import java.util.UUID;
-
 /**
  * Represents a QR Code by a UUID associated with an url.
  */
