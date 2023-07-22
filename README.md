@@ -15,7 +15,12 @@ Once the server is up, you can create, retrieve, update, and delete QRCodes with
 ### Create QRCode:
 
 - POST /qrcodes
-Payload: { "redirectionLink": "http://example.com" }
+- Body > raw > JSON: { "redirectionLink": "http://url-to-affiliate.com" }
+- Response:
+<code>{
+    "uuid": "c493f95a-ecf0-451a-ab68-d60ab8da514a", // New generated UUID
+    "redirectURL": "http://url-to-affiliate.com"
+}</code>
 
 ### Retrieve all QRCodes:
 - GET /qrcodes
@@ -25,10 +30,16 @@ Payload: { "redirectionLink": "http://example.com" }
 
 ### Update QRCode redirection link:
 - PUT /qrcodes/{uuid}
-- Payload: { "redirectionLink": "http://new-link.com" }
+- Body > raw > JSON: { "redirectionLink": "http://new-link.com" }
+- Response:
+<code>{
+    "uuid": "{uuid}",
+    "redirectURL": "http://new-link.com"
+}</code>
 
 ### Delete QRCode by UUID:
 - DELETE /qrcodes/{uuid}
+- Response: <code>true if deleted, false otherwise.</code>
 
 ## Contributing
 Contributions, issues, and feature requests are welcome! Feel free to check the issues page.
