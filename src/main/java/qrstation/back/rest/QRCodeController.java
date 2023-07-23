@@ -1,7 +1,7 @@
 package qrstation.back.rest;
 
-import qrstation.back.data.QRCode;
-import qrstation.back.data.QRCodeRequest;
+import qrstation.back.database.data.QRCode;
+import qrstation.back.database.data.QRCodeRequest;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.*;
