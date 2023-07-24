@@ -1,19 +1,23 @@
-package qrstation.back.database.data;
+package qrstation.back.data;
 
-import com.j256.ormlite.field.DatabaseField;
-import com.j256.ormlite.table.DatabaseTable;
+import javax.persistence.*;
+import java.util.UUID;
 
 /**
  * Represents a QR Code by a UUID associated with an url.
  */
-@DatabaseTable(tableName = "qrcodes")
+@Entity
 public class QRCode {
 
-    @DatabaseField(id = true)
+    @Id
     private final String uuid;
 
-    @DatabaseField
+    @Column
     private String redirectURL;
+
+    public QRCode() {
+        uuid = UUID.randomUUID().toString();
+    }
 
     public QRCode(String uuid, String redirectURL) {
         this.uuid = uuid;
