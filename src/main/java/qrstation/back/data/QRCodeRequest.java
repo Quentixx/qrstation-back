@@ -1,4 +1,4 @@
-package qrstation.back.database.data;
+package qrstation.back.data;
 
 /**
  * Represents a request for a specific QRCode on the restful service.
