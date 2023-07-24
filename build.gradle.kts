@@ -22,8 +22,6 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-web")
 
     runtimeOnly("com.h2database:h2")
-    implementation("com.j256.ormlite:ormlite-core:6.1")
-    implementation("com.j256.ormlite:ormlite-jdbc:6.1")
 
     testImplementation("org.springframework.boot:spring-boot-starter-test") {
         exclude(mapOf("group" to "org.junit.vintage", "module" to "junit-vintage-engine"))
